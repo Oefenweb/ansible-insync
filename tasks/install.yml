@@ -1,0 +1,9 @@
+# tasks file for insync
+---
+- name: install dependencies
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ insync_dependencies }}"
+  tags:
+    - insync-install-dependencies
