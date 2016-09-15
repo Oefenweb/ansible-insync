@@ -2,8 +2,8 @@
 ---
 - name: add public key
   apt_key:
-    id: 76D78F0500D026C4
-    url: https://d2t3ff60b2tol4.cloudfront.net/services@insynchq.com.gpg.key
+    id: A684470CACCAF35C
+    keyserver: keyserver.ubuntu.com
     state: present
   tags:
     - insync-repository-public-key
