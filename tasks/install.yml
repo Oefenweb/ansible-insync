@@ -2,8 +2,7 @@
 ---
 - name: install dependencies
   apt:
-    name: "{{ item }}"
+    name: "{{ insync_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ insync_dependencies }}"
   tags:
     - insync-install-dependencies
