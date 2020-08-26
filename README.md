@@ -1,6 +1,7 @@
 ## insync
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-insync.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-insync) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-insync-blue.svg)](https://galaxy.ansible.com/Oefenweb/insync/)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-insync.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-insync)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-insync-blue.svg)](https://galaxy.ansible.com/Oefenweb/insync/)
 
 Set up [Insync](https://www.insynchq.com) in Debian-like systems.
 
