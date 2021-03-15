@@ -1,4 +1,4 @@
-# vars file for insync
+# vars file
 ---
 insync_repositories:
   - type: deb

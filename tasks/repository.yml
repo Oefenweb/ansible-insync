@@ -1,4 +1,4 @@
-# tasks file for insync
+# tasks file
 ---
 - name: add public key
   apt_key:

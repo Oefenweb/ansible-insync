@@ -1,4 +1,4 @@
-# test file for insync
+# test file
 ---
 - hosts: localhost
   connection: local
