@@ -1,6 +1,6 @@
 # tasks file
 ---
-- name: install dependencies
+- name: install | dependencies
   apt:
     name: "{{ insync_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"

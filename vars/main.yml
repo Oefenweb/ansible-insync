@@ -5,5 +5,9 @@ insync_repositories:
     url: "http://apt.insynchq.com/{{ ansible_distribution | lower }} {{ ansible_distribution_release }}"
     component: 'non-free contrib'
 
+insync_dependencies_pre:
+  - software-properties-common
+  - dirmngr
+
 insync_dependencies:
   - insync
