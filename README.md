@@ -1,13 +1,16 @@
 ## insync
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-insync.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-insync)
+[![CI](https://github.com/Oefenweb/ansible-insync/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-insync/actions?query=workflow%3ACI)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-insync-blue.svg)](https://galaxy.ansible.com/Oefenweb/insync/)
 
 Set up [Insync](https://www.insynchq.com) in Debian-like systems.
 
 #### Requirements
 
-None
+* `software-properties-common` (will be installed)
+* `dirmngr` (will be installed)
+* `apt-utils` (will be installed)
+* `procps` (will be installed)
 
 #### Variables
 

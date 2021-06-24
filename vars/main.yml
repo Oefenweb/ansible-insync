@@ -2,8 +2,14 @@
 ---
 insync_repositories:
   - type: deb
-    url: "http://apt.insynchq.com/{{ ansible_distribution | lower }} {{ ansible_distribution_release }}"
+    url: "http://apt.insync.io/{{ ansible_distribution | lower }} {{ ansible_distribution_release }}"
     component: 'non-free contrib'
+
+insync_dependencies_pre:
+  - software-properties-common
+  - dirmngr
+  - apt-utils
+  - procps
 
 insync_dependencies:
   - insync
