@@ -7,7 +7,8 @@ Set up [Insync](https://www.insynchq.com) in Debian-like systems.
 
 #### Requirements
 
-None
+* `software-properties-common` (will be installed)
+* `dirmngr` (will be installed)
 
 #### Variables
 
