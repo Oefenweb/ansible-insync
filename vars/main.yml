@@ -8,6 +8,8 @@ insync_repositories:
 insync_dependencies_pre:
   - software-properties-common
   - dirmngr
+  - apt-utils
+  - procps
 
 insync_dependencies:
   - insync
