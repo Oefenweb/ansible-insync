@@ -26,7 +26,7 @@ None
 ---
 - hosts: all
   roles:
-    - insync
+    - oefenweb.insync
 ```
 
 #### License
