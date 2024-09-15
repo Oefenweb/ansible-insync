@@ -13,13 +13,14 @@
   ansible.builtin.apt_key:
     id: A684470CACCAF35C
     keyserver: "{{ apt_key_keyserver | default('keyserver.ubuntu.com') }}"
+    keyring: '/etc/apt/trusted.gpg.d/insync.gpg'
     state: present
   tags:
     - insync-repository-public-key
 
 - name: repository | add
   ansible.builtin.apt_repository:
-    repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
+    repo: "{{ item.type }} [signed-by={{ item.keyring }}] {{ item.url }} {{ item.component }}"
     state: present
     update_cache: true
     mode: 0644
