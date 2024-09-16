@@ -1,10 +1,5 @@
 # vars file
 ---
-insync_repositories:
-  - type: deb
-    url: "http://apt.insync.io/{{ ansible_distribution | lower }} {{ ansible_distribution_release }}"
-    component: 'non-free contrib'
-
 insync_dependencies_pre:
   - software-properties-common
   - dirmngr

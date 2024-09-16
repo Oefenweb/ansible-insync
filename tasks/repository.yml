@@ -20,7 +20,7 @@
 
 - name: repository | add
   ansible.builtin.apt_repository:
-    repo: "{{ item.type }} [signed-by={{ item.keyring }}] {{ item.url }} {{ item.component }}"
+    repo: "{{ item.type }} [signed-by=/etc/apt/trusted.gpg.d/insync.gpg]  {{ item.url }} {{ item.component }}"
     state: present
     update_cache: true
     mode: 0644
