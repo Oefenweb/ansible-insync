@@ -1,5 +1,19 @@
 # tasks file
 ---
+- name: "Loading Debian variables"
+  ansible.builtin.include_vars:
+    file: 'Debian.yml'
+  when: ansible_distribution  == "Debian"
+- name: "Loading Ubuntu variables"
+  ansible.builtin.include_vars:
+    file: 'Ubuntu.yml'
+  when: ansible_distribution == "Ubuntu"
+- name: "Loading Linux Mint variables"
+  ansible.builtin.include_vars:
+    file: "LinuxMint.yml"
+  when: ansible_distribution == "Linux Mint"
+
+
 - name: repository
   ansible.builtin.import_tasks: repository.yml
   tags:

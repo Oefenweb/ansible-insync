@@ -1,0 +1,5 @@
+---
+insync_repositories:
+  - type: deb
+    url: "http://apt.insync.io/mint {{ ansible_distribution_release }}"
+    component: 'non-free contrib'

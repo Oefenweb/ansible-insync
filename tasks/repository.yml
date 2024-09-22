@@ -1,5 +1,10 @@
 # tasks file
 ---
+- name: "Creating keyring directory"
+  ansible.builtin.file:
+    path: "{{ apt_key_dir }}"
+    state: "directory"
+    mode: '755'
 - name: repository | dependencies
   ansible.builtin.apt:
     name: "{{ insync_dependencies_pre }}"
@@ -13,13 +18,14 @@
   ansible.builtin.apt_key:
     id: A684470CACCAF35C
     keyserver: "{{ apt_key_keyserver | default('keyserver.ubuntu.com') }}"
+    keyring: "{{ apt_key_dir}}/insync.gpg"
     state: present
   tags:
     - insync-repository-public-key
 
 - name: repository | add
   ansible.builtin.apt_repository:
-    repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
+    repo: "{{ item.type }} [signed-by={{ apt_key_dir }}/insync.gpg]  {{ item.url }} {{ item.component }}"
     state: present
     update_cache: true
     mode: 0644
