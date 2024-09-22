@@ -8,3 +8,4 @@ insync_dependencies_pre:
 
 insync_dependencies:
   - insync
+apt_key_dir: '/etc/apt/keyrings'
