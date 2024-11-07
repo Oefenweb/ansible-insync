@@ -8,6 +8,7 @@ insync_repositories:
 insync_dependencies_pre:
   - software-properties-common
   - dirmngr
+  - gpg-agent
   - apt-utils
   - procps
 
