@@ -10,8 +10,6 @@ Set up [Insync](https://www.insynchq.com) in Debian-like systems.
 * `software-properties-common` (will be installed)
 * `dirmngr` (will be installed)
 * `apt-transport-https` (will be installed)
-* `wget` (will be installed)
-* `coreutils` (will be installed)
 
 * `apt-utils` (will be installed)
 * `procps` (will be installed)

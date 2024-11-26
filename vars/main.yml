@@ -16,8 +16,6 @@ insync_dependencies_pre:
   - software-properties-common
   - dirmngr
   - apt-transport-https
-  - wget
-  - coreutils
   - apt-utils
   - procps
 
