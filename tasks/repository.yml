@@ -23,7 +23,7 @@
   ansible.builtin.apt_key:
     id: "{{ insync_keyring_id }}"
     keyserver: "{{ apt_key_keyserver | default('keyserver.ubuntu.com') }}"
-    keyring: "{{ insync_keyring_dst}}"
+    keyring: "{{ insync_keyring_dst }}"
     state: present
   tags:
     - insync-repository-keyring-file-download
