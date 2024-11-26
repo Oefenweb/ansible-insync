@@ -19,11 +19,12 @@
   tags:
     - insync-repository-keyrings-directory-create
 
-- name: repository | (keyring) file | download  # noqa command-instead-of-module risky-shell-pipe
-  ansible.builtin.shell: >
-    wget -O- {{ insync_keyring_src }} | gpg --dearmor | tee {{ insync_keyring_dst }} > /dev/null
-  args:
-    creates: "{{ insync_keyring_dst }}"
+- name: repository | (keyring) file | download
+  ansible.builtin.apt_key:
+    id: "{{ insync_keyring_id }}"
+    keyserver: "{{ apt_key_keyserver | default('keyserver.ubuntu.com') }}"
+    keyring: "{{ insync_keyring_dst}}"
+    state: present
   tags:
     - insync-repository-keyring-file-download
 

@@ -1,6 +1,6 @@
 # vars file
 ---
-insync_keyring_src: https://packagecloud.io/github/git-lfs/gpgkey
+insync_keyring_id: A684470CACCAF35C
 insync_keyring_dst: /usr/share/keyrings/insync.gpg
 insync_repositories:
   - type: "deb [signed-by={{ insync_keyring_dst }}]"
