@@ -1,14 +1,21 @@
 # vars file
 ---
+insync_keyring_id: A684470CACCAF35C
+insync_keyring_dst: /usr/share/keyrings/insync.gpg
 insync_repositories:
+  - type: "deb [signed-by={{ insync_keyring_dst }}]"
+    url: "http://apt.insync.io/{{ ansible_distribution | lower }} {{ ansible_distribution_release }}"
+    component: 'non-free contrib'
+  # TODO: Remove in next major release
   - type: deb
     url: "http://apt.insync.io/{{ ansible_distribution | lower }} {{ ansible_distribution_release }}"
     component: 'non-free contrib'
+    state: absent
 
 insync_dependencies_pre:
   - software-properties-common
   - dirmngr
-  - gpg-agent
+  - apt-transport-https
   - apt-utils
   - procps
 
