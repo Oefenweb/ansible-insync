@@ -6,8 +6,8 @@
     state: directory
     recurse: true
   when:
-    - ansible_distribution == 'Ubuntu'
-    - ansible_distribution_major_version is version('20', '>=')
+    - ansible_facts['distribution'] == 'Ubuntu'
+    - ansible_facts['distribution_major_version'] is version('20', '>=')
   tags:
     - insync-install-dependencies
 

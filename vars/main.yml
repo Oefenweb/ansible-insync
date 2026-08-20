@@ -4,10 +4,10 @@ insync_keyring_id: A684470CACCAF35C
 insync_keyring_dst: /usr/share/keyrings/insync.gpg
 insync_repositories:
   - type: "deb [signed-by={{ insync_keyring_dst }}]"
-    url: "http://apt.insync.io/{{ ansible_distribution | lower }} {{ ansible_distribution_release }}"
+    url: "http://apt.insync.io/{{ ansible_facts['distribution'] | lower }} {{ ansible_facts['distribution_release'] }}"
     component: 'non-free contrib'
   - type: deb
-    url: "http://apt.insync.io/{{ ansible_distribution | lower }} {{ ansible_distribution_release }}"
+    url: "http://apt.insync.io/{{ ansible_facts['distribution'] | lower }} {{ ansible_facts['distribution_release'] }}"
     component: 'non-free contrib'
     state: absent
 
